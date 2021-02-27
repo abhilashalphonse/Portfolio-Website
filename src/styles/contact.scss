@@ -1,0 +1,81 @@
+$second-color: #f24338;
+$third-color: #2a81ea;
+
+.contact-background {
+  background-color: $second-color;
+  width: 100%;
+  
+  .contact {
+    height: 250px;
+    width: 1440px;
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      text-align: center;
+      font-size: 54px;
+    }
+
+    .social-media {
+      margin: 25px 0 10px;
+      display: flex;
+      justify-content: center;
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 22px;
+        margin: 0 25px;
+        i {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1439px){
+  .contact-background {
+    .contact {
+      width: 1080px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1079px){
+  .contact-background {
+    .contact {
+      width: 720px;
+      height: 350px;
+
+      .social-media {
+        flex-direction: column;
+        align-items: center;
+
+        a {
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .contact-background {
+    .contact {
+      width: 480px;
+    }
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .contact-background {
+    .contact {
+      width: 300px;
+    }
+  }
+}

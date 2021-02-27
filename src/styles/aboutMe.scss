@@ -1,0 +1,146 @@
+$second-color: #f24338;
+$third-color: #2a81ea;
+
+.about-me {
+  width: 1440px;
+  margin: 0 auto;
+  padding: 25px 0 45px;
+  color: white;
+
+  h1 {
+    text-align: center;
+    font-size: 54px;
+    padding: 25px 0;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+
+    .image-container {
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 95%;
+      }
+    }
+
+    .text {
+      width: 50%;
+      font-size: 24px;
+      font-weight: lighter;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        margin-bottom: 25px 0 10px;
+        text-align: justify;
+
+        span {
+          color: $second-color;
+          font-weight: bold;
+        }
+      }
+
+      h3 {
+        margin: 15px 0 10px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .hobbies {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .container {
+          display: flex;
+          align-items: center;
+          margin: 10px 0;
+  
+          .icon-container {
+            width: 50px;
+            height: 50px;
+            background-color: $third-color;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+          }
+  
+          h5 {
+            margin: 0 15px;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 1439px){
+  .about-me {
+    width: 1080px;
+  }
+}
+
+@media only screen and (max-width: 1079px) {
+  .about-me {
+    width: 720px;
+
+    .content {
+      flex-direction: column;
+      align-items: center;
+
+      .image-container {
+        width: 80%;
+      }
+
+      .text {
+        width: 80%;
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .about-me {
+    width: 480px;
+
+    .content {
+      flex-direction: column;
+      align-items: center;
+
+      .image-container {
+        width: 90%;
+      }
+
+      .text {
+        width: 90%;
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .about-me {
+    width: 300px;
+
+    .content {
+      .image-container {
+        width: 100%;
+      }
+
+      .text {
+        width: 100%;
+      }
+    }
+  }
+}

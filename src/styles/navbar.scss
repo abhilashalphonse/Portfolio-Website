@@ -1,0 +1,135 @@
+$second-color: #f24338;
+$third-color: #2a81ea;
+$items-padding: 10px 20px;
+$responsive-items-padding: 4px 20px;
+
+.navbar {
+  width: 1440px;
+  margin: 0 auto;
+  color: white;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    margin: 10px 0;
+
+    h1 {
+      font-size: 44px;
+      color: $second-color;
+    }
+
+    span {
+      color: white;
+      font-weight: bold;
+    }
+  }
+
+  .menu-container {
+    .menu {
+      display: flex;
+      list-style-type: none;
+
+      .responsive-menu {
+        .drop-down {
+          .menu-icon, .menu-item {
+            display: none;
+          }
+        }
+      }
+
+      .item {
+        float: left;
+        padding: $items-padding;
+        font-size: 22px;
+        cursor: pointer;
+
+        &:hover {
+          text-shadow: 1px 1px 1px $second-color;
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1439px){
+  .navbar {
+    width: 1080px;
+  }
+}
+
+@media only screen and (max-width: 1079px){
+  .navbar {
+    width: 100%;
+    padding: 0 50px;
+
+    .logo {
+      span {
+        display: none;
+      }
+    }
+
+    .menu-container {
+      .menu {
+        .responsive-menu {
+          position: fixed;
+          top: 25px;
+          
+          .drop-down {
+            display: flex;
+            flex-direction: column;
+
+            .menu-icon {
+              display: inline;
+              cursor: pointer;
+              i {
+                font-size: 22px;
+              }
+
+            }
+
+            .menu-item {
+              position: relative;
+              right: 90px;
+              background-color: $second-color;
+              width: 115px;
+              padding: 15px;
+              text-align: right;
+
+              a {
+                cursor: pointer;
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+              }
+
+              &:hover {
+                background-color: $third-color;
+              }
+            }
+
+            &:hover .menu-item{
+              display: inline;
+            }
+          }
+        }
+
+        .item {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .navbar {
+    width: 100%;
+  }
+}

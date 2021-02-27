@@ -1,0 +1,137 @@
+$second-color: #f24338;
+$third-color: #2a81ea;
+
+.projects {
+  width: 1440px;
+  margin: 0 auto;
+  color: white;
+
+  h1 {
+    text-align: center;
+    font-size: 54px;
+    margin: 40px 0 15px;
+  }
+
+  .projects-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px 0;
+
+    .project {
+      width: 45%;
+      margin: 5px 0 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .image-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+      }
+
+      h3 {
+        font-size: 26px;
+        margin: 5px 10px;
+      }
+      
+      p {
+        font-weight: lighter;
+        margin: 5px 10px 15px;
+      }
+
+      .technologies {
+        align-self: start;
+        display: flex;
+        margin: 0 10px;
+        flex-wrap: wrap;
+
+        h5 {
+          margin: 5px;
+          padding: 5px;
+          border: 1px solid $second-color;
+          border-radius: 7px;
+        }
+      }
+
+      .links {
+        margin: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-self: start;
+
+        a {
+          color: white;
+          text-decoration: none;
+          margin: 5px;
+          padding: 5px 10px;
+          background-color: $third-color;
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1439px){
+  .projects {
+    width: 1080px;
+  }
+}
+
+@media only screen and (max-width: 1079px){
+  .projects {
+    width: 720px;
+
+    .projects-container {
+      flex-direction: column;
+      align-items: center;
+
+      .project {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .projects {
+    width: 480px;
+
+    .projects-container {
+      .project {
+        width: 100%;
+
+        .image-container {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .projects {
+    width: 300px;
+
+    .projects-container {
+      .project {
+        width: 100%;
+
+        .image-container {
+          width: 100%;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
